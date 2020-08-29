@@ -1,0 +1,172 @@
+body{
+    width: 1000px;
+    height: 1280px;
+    margin: auto;
+    text-decoration: none;
+}
+    
+.grey_bar {
+    background-color: rgb(134, 131, 131); 
+    height: 350px;
+    position: relative;
+    float: top;
+
+}
+
+.white_bar {
+    background-color: white;
+    width:  1000px;
+    height: 40px;
+    position: absolute;
+    margin-top: 272px;
+}
+
+.img_circle {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    background: url("./manasmita.jpg"); 
+    position: absolute ;
+    margin-left: 410px; 
+    margin-top: -200px;
+    
+}
+
+.yellow_bar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 46px;
+    text-align: center;
+    width: 400px;
+    height: 95px;
+    background-color:rgb(243, 188, 50);
+    border-radius: 7px;
+    position: absolute ;
+    margin-left: -109px; 
+    margin-top: 170px
+    
+}
+
+.line {
+    height: 30px;
+    background-color: white;
+}
+
+.line nav{
+    height:1px;
+    background-color: rgb(160, 158, 158);
+
+}
+.line p{
+ text-align: center;
+ font-family: Verdana, Tahoma, sans-serif;
+}
+
+.left_data {
+    float: left;
+    width: 47%;
+    height: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+
+}
+
+.middle_line{
+    margin-top: 15px;
+    margin-left: 20px;
+    width : 2px;
+    float: left;
+    height: 1000px;
+
+}
+
+.middle_line nav{
+    width:2px;
+    height: 100%;
+    background-color:rgb(86, 86, 86);
+}
+.right_data {
+    float: right;
+    width: 47%;
+    height: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+
+}
+
+.left_data .WorkExperience ul{
+    display: inline;
+}
+
+#profile{
+    position: relative;
+}
+
+#profile #image{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: goldenrod;
+}
+.sub_heading_bar{
+    margin-left: 40px;
+}
+
+#Skills{
+    position: relative;
+
+}
+#Skills #image2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: goldenrod;
+}
+.nameHedder1{
+    margin-left: 40px; 
+}
+#Skills  .subhedder{
+    text-align: left;
+
+}
+ .skillsProgress ul {
+     list-style: none;
+     display: inline;
+}
+
+progress{
+    align-self: initial;
+}
+
+#WorkExperience{
+    position: relative;
+    
+}
+#WorkExperience #image3{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: goldenrod;
+}
+#WorkExperience1{
+    position: relative;
+}
+#WorkExperience1 #image4{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: goldenrod;
+}
+#WorkExperience1{
+    list-style: inline;
+}
+#Education{
+    position: relative;
+}
+
+#Education #image5{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: goldenrod;
+}
