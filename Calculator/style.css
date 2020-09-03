@@ -7,18 +7,19 @@ body {
 
 .outerbox {
     margin: 50px;
-    width: 600px;
+    width: 400px;
 }
 
 .display {
-    width:240px;
+    width:200px;
     font-size: 30px;
-    margin-left: 180px;
+    margin-left: 100px;
 }
 
 .keys {
     display: flex;
     justify-content: space-around;
+    border-spacing: 5px 5px;
 }
 .col-1 {
     width:40%;
@@ -27,15 +28,16 @@ body {
     justify-content: center;
 }
 .onScreen_button {
+    display: block;
     padding:15px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-    font-size: x-large;
+    font-size: large;
     text-shadow: 2px 2px 4px #000000;
 }
 
 .onScreen_button2 {
 
-    padding-inline-end: 200px;
-    font-size: x-large;
+    padding-inline-end: 70px;
+    font-size: large;
     text-shadow: 2px 2px 4px #000000;
 }
 
