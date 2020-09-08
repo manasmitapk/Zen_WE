@@ -1,0 +1,15 @@
+.container {
+    border: 1px solid rgba(0, 0, 0, .11);
+    background-color: cornsilk;
+    padding: 10px;
+    width: 100px;
+}
+
+.controls-item {
+    display: inline-block;
+    background-color: blue;
+}
+
+.btn {
+    margin: 5px;
+}
