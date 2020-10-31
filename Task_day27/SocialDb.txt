@@ -1,0 +1,90 @@
+CREATE database socialapp;
+use socialapp;
+
+CREATE table profile_status(status varchar(10), user_id INT(20));
+
+INSERT INTO profile_status values('ONLINE', 1);
+INSERT INTO profile_status  values('OFFLINE', 2);
+INSERT INTO profile_status values('ONLINE', 3);
+INSERT INTO profile_status values('OFFLINE', 4);
+INSERT INTO profile_status values('ONLINE', 5);
+
+
+CREATE table user_profile(user_id INT(20), user_name varchar(100));
+
+INSERT INTO user_profile values(1, "Manasmita");
+INSERT INTO user_profile values(2, "Asit");
+INSERT INTO user_profile values(3, "Ruchi");
+INSERT INTO user_profile values(4, "Rishi");
+INSERT INTO user_profile values(5, "Jacky");
+
+
+CREATE table friends(user_id INT(20), friend_id INT(20));
+
+INSERT INTO friends values(1, 4);
+INSERT INTO friends values(2, 1);
+INSERT INTO friends values(1, 3);
+INSERT INTO friends values(3, 1);
+INSERT INTO friends values(3, 2);
+INSERT INTO friends values(4, 5);
+INSERT INTO friends values(5, 1);
+INSERT INTO friends values(2, 3);
+
+
+CREATE table comments(comment varchar(100), post_id INT(10), person_id INT(10));
+
+INSERT INTO comments values('Very Nice', 2, 3);
+INSERT INTO comments values('Beautiful', 4, 3);
+INSERT INTO comments values('Great', 5, 3);
+INSERT INTO comments values('Nice work', 6, 3);
+INSERT INTO comments values('Superb', 7, 3);
+INSERT INTO comments values('Beautiful', 8, 3);
+INSERT INTO comments values('Thanks', 2, 1);
+INSERT INTO comments values('congrats', 1, 2);
+
+
+CREATE table likes(post_id INT(100), liker_id INT(100));
+
+INSERT INTO likes values(1, 2);
+INSERT INTO likes values(1, 4);
+INSERT INTO likes values(1, 1);
+INSERT INTO likes values(2, 3);
+INSERT INTO likes values(3, 1);
+
+
+CREATE table user_login_details(user_id INT(100), user_mail varchar(100), password varchar(100));
+
+INSERT INTO user_login_details values(1, 'manasmita@gmail.com', 'ksdgfjr');
+INSERT INTO user_login_details values(2, 'asit@gmail.com', 'dbfjhsk');
+INSERT INTO user_login_details values(3, 'ruchi@yahoo.com', '64bjs27');
+INSERT INTO user_login_details values(4, 'rishi@yahoo.com', 'jh48fnjd');
+INSERT INTO user_login_details values(5, 'jacky@gmail.com', 'justu123');
+
+CREATE table posts(post_id INT(100), user_id INT(100));
+
+INSERT INTO posts values(1, 3);
+INSERT INTO posts values(2, 1);
+INSERT INTO posts values(3, 3);
+INSERT INTO posts values(4, 2);
+INSERT INTO posts values(5, 4);
+INSERT INTO posts values(6, 5);
+
+
+
+-- Queries
+
+-- Friend table list which are matched with user profile id
+ SELECT * from friends f inner join user_profile u on f.friend_id = u.user_id;
+ 
+-- Display all the posts of user id 5
+SELECT * from posts where user_id = 5;
+
+
+-- Query that matches with "%gmail%"
+SELECT * from user_login_details where user_mail like '%gmail%';
+
+-- Limit the display data from comments table 5 which belongs to user 3
+SELECT * from comments where commenter_id=3 limit 5;
+
+-- Combine profile_status, user_profile and user_login_details and display matching records
+SELECT * from profile_status p inner join user_profile up on p.user_id = up.user_id inner join user_login_details ul on up.user_id = ul.user_id; 
