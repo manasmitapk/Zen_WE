@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GIT HUB</title>
+    <style>
+
+    </style>
+</head>
+<h1 style="text-align: center; margin-top: 250px;">Git HUB</h1>
+
+<body>
+    
+    <div style="text-align: center;">
+        <div>
+            <input type="text" id="searchName" placeholder="search or jump to..." required>
+        </div>
+        <button id="searchBtn">Go</button>
+        
+    </div>
+<script>
+    searchBtn.addEventListener("click", function(){
+
+ 
+        if(searchName.value === "" )
+          {
+            searchName.placeholder = "Please Enter an User name to search"
+          }
+          else{
+            searchBtn.disabled = true;
+                 getData(searchName.value);
+          }
+     
+     });
+         
+     let getData = async(searchName) =>
+      {
+     
+          try
+          {
+          let response = await fetch(`https://api.github.com/users/${searchName}/repos?per_page=10&sort=created:asc`)
+         let data = await response.json();
+         let booleanValue = true;
+          if(response.status == 200)
+           {
+               //console.log(data);
+
+               data.forEach(element => { 
+                var a = document.createElement('a'); 
+                
+                  // Create the text node for anchor element. 
+                  var link = document.createTextNode(element.full_name); 
+                  
+                  // Append the text node to anchor element. 
+                  a.appendChild(link);  
+                    
+                  // Set the title. 
+                  a.title = element.full_name;  
+                    
+                  // Set the href property. 
+                  a.href = element.html_url;  
+
+                  a.target = "_blank";
+                    
+                  // Append the anchor element to the body. 
+                  document.body.appendChild(a);
+                  document.write("<br>");
+               });
+           }
+           else
+            {    
+                alert("No User Found. Please Enter Again")
+     
+            }
+         
+          }
+          catch(err)
+           {
+                 alert(err);
+           }
+      }
+
+      
+    </script>
+</body>
+
+</html>
